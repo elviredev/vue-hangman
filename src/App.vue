@@ -18,7 +18,7 @@ import Word from '@/components/Word.vue'
 import Popup from '@/components/Popup.vue'
 import Notification from '@/components/Notification.vue'
 
-import onKeydown from './assets/onKeydown'
+import onKeyDown from "@/assets/onKeyDown";
 
 const words = ['boxe', 'jazz', 'gifle', 'banane', 'koala', 'ananas', 'bienvenue', 'coccyx', 'javelot', 'banquise', 'bourricot', 'xylophone', 'conquistador']
 const randomWord = () => words[Math.floor(Math.random() * words.length)]
@@ -54,7 +54,7 @@ export default {
       setTimeout(() => (notification.value = false), 2000)
     }
 
-    onKeydown(event => {
+    onKeyDown(event => {
       const letter = event.key.toLowerCase()
       if (event.keyCode < 65 || event.keyCode > 90) return
       if (status.value) return
